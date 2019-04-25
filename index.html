@@ -22,11 +22,12 @@
     
     console.log(generatehiddenWord());
 
-    document.addEventListener("keypress", function(){
-        var keycode = event.keycode;
-        
-        console.log(keycode);
-    }); 
+    document.addEventListener('keypress', function(keypress) {
+        var keypress = event.keyCode
+        var keyword = String.fromCharCode(keypress)
+
+        console.log(keyword);
+    });
 
         </script>
     </body>
