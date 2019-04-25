@@ -7,9 +7,27 @@
     <body>
         <script type="text/javascript">
         var word = ["line", "hieght", "hue"]
-        var randNum = Math.floor(Math.random()* word.length);
-        var chosenWord = word[randNum];
+        var randomNumber = Math.floor(Math.random()* word.length);
+        var chosenWord = word[randomNumber];
+        var hiddenWord = [];
         console.log(chosenWord);
+    
+    var generatehiddenWord = function (){
+        for(var i=0; i<chosenWord.length; i++) {
+            hiddenWord.push('_');
+        }
+    
+    return hiddenWord;
+    }
+    
+    console.log(generatehiddenWord());
+
+    document.addEventListener("keypress", function(){
+        var keycode = event.keycode;
+        
+        console.log(keycode);
+    }); 
+
         </script>
     </body>
 </html>
