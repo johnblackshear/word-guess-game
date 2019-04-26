@@ -10,24 +10,35 @@
         var randomNumber = Math.floor(Math.random()* word.length);
         var chosenWord = word[randomNumber];
         var hiddenWord = [];
+        var rightGuess = [];
+        var wrongGuess = [];
+        var guessRemainig = 10;
+        var guessedletter;
         console.log(chosenWord);
     
     var generatehiddenWord = function (){
-        for(var i=0; i<chosenWord.length; i++) {
-            hiddenWord.push('_');
-        }
-    
-    return hiddenWord;
-    }
+        
+
+}
     
     console.log(generatehiddenWord());
 
     document.addEventListener('keypress', function(keypress) {
         var keypress = event.keyCode
         var keyword = String.fromCharCode(keypress)
-
+  
         console.log(keyword);
-    });
+      if(chosenWord.indexOf(keyword) > -1){
+          rightGuess.push(keyword);
+          console.log(rightGuess);
+        }
+
+        else{
+          wrongGuess.push(keyword);
+        console.log(wrongGuess);}
+      }
+       
+    );
 
         </script>
     </body>
