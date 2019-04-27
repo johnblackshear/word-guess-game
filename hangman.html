@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        
     </head>
     <body>
         <img src="img/thinking.jpg" class="main_img" height="200px">
-        <form>
-            <input type="text" placeholder="What's your Guess?">
-            <input type="button" value="submit">
-        </form>
+        <div id="remaining"> <h3>Remaining Guesses</h3></div>
+        <div><p id="underscores"></p> </div>
+        <script>
+             var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("underscores").innerHTML = txt.length;
+        </script>
+                
     </body>
 </html>
