@@ -1,48 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-    </head>
-
-    <body>
-        <script type="text/javascript">
-        var word = ["line", "hieght", "hue"]
-        var randomNumber = Math.floor(Math.random()* word.length);
-        var chosenWord = word[randomNumber];
-        var hiddenWord = [];
-        var rightGuess = [];
-        var wrongGuess = [];
-        var guessRemainig = 0;
-        var guessedletter;
-        console.log(chosenWord);
-    
-    var generatehiddenWord = function (){
+        <script type="text/javascript" src="script.js"></script>
         
-
-}
-    
-    console.log(generatehiddenWord());
-
-    document.addEventListener('keypress', function(keypress) {
-        var keypress = event.keyCode
-        var keyword = String.fromCharCode(keypress)
-  
-        console.log(keyword);
-      if(chosenWord.indexOf(keyword) > -1){
-          rightGuess.push(keyword);
-          console.log(rightGuess);
-        }
-
-        else{
-          wrongGuess.push(keyword);
-        console.log(wrongGuess);}
-      }
-          
-      
-
-       
-    );
-
+    </head>
+    <body>
+        <img src="img/thinking.jpg" class="main_img" height="200px">
+        <div id="remaining"> <h3>Remaining Guesses</h3></div>
+        <div><p id="underscores"></p> </div>
+        <script>
+             var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("underscores").innerHTML = txt.length;
         </script>
+                
     </body>
 </html>
